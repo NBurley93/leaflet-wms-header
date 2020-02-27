@@ -1,14 +1,16 @@
-# leaflet-wms-header
-Custom headers on Leaflet TileLayer WMS.
-It's a simple plugin that allow to set custom header for WMS interface.
+# leaflet-tilelayer-header
+Custom headers on Leaflet TileLayer.
+It's a simple plugin that allow to set custom header for leaflet's TileLayer.
 
 It works with javascript and typescript without any dependencies!
 
 Based on https://github.com/Leaflet/Leaflet/issues/2091#issuecomment-302706529.
 
+Derived from https://github.com/ticinum-aerospace/leaflet-wms-header
+
 ### Javascript
 ```sh
-$ npm install leaflet leaflet-wms-header --save
+$ npm install leaflet git+https://git@github.com/NBurley93/leaflet-wms-header.git
 ```
 
 ```html
@@ -21,7 +23,7 @@ $ npm install leaflet leaflet-wms-header --save
 
 // YOUR LEAFLET CODE
 
-var wmsLayer = L.TileLayer.wmsHeader(
+var xhrlayer = L.TileLayer.xhrLayer(
     'https://GEOSERVER_PATH/geoserver/wms?',
     {
         layers: 'ne:ne',
@@ -46,7 +48,7 @@ import 'leaflet-wms-header';
 
 // YOUR LEAFLET CODE
 
-let wmsLayer: L.TileLayer.WMSHeader = L.TileLayer.wmsHeader(
+let wmsLayer: L.TileLayer.XHRLayer = L.TileLayer.xhrLayer(
     'https://GEOSERVER_PATH/geoserver/wms?',
     {
         layers: layers,
